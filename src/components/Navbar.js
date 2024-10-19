@@ -36,7 +36,7 @@ const Navbar = () => {
                     </div>
                 ) : (
                     <div className="nav-links">
-                        <Link to="/" className="nav-item">Home</Link>
+                        <Link to="/Classroom-Transparency" className="nav-item">Home</Link>
                         <Link to="/notice" className="nav-item">Notices</Link>
                         <Link to="/gallery" className="nav-item">Gallery</Link>
                         <Link to="/chat" className="nav-item">Chatroom</Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
             </nav>
             {isMobile && isMenuOpen && (
                 <div className="mobile-menu">
-                    <Link to="/" className="nav-item" onClick={toggleMenu}>Home</Link>
+                    <Link to="/Classroom-Transparency" className="nav-item" onClick={toggleMenu}>Home</Link>
                     <Link to="/notice" className="nav-item" onClick={toggleMenu}>Notices</Link>
                     <Link to="/gallery" className="nav-item" onClick={toggleMenu}>Gallery</Link>
                     <Link to="/chat" className="nav-item" onClick={toggleMenu}>Chatroom</Link>

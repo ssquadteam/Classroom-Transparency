@@ -23,7 +23,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route
-            path="/"
+            path="/Classroom-Transparency"
             element={
               <>
                 <SchoolInfo />
