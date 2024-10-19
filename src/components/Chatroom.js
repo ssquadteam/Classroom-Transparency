@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Chatroom.css';
 import io from 'socket.io-client';
 
-const socket = io('https://6711c250-f6ca-4f9f-a6e2-2b3df23ce26f-00-3paa249pb63vs.sisko.replit.dev/');
+const socket = io('http://51.79.152.5:3001');
 
 const Chatroom = ({ user }) => {
   const [messages, setMessages] = useState([]);
