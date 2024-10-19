@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import usersData from './users.json'; // Import the JSON file
 import './Login.css';
 
 const Login = ({ onLogin }) => {
   const [userId, setUserId] = useState('');
+
+  // Parse the JSON data from the environment variable
+  const usersData = JSON.parse(process.env.REACT_APP_USERS_JSON || '[]');
 
   const handleLogin = () => {
     const user = usersData.find((user) => user.id === userId);
