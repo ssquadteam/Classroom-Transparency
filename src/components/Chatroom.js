@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Chatroom.css';
 import io from 'socket.io-client';
 
-const socket = io('http://51.79.152.5:3001');
+const socket = io('https://51.79.152.5:3001', {
+  secure: true,
+  rejectUnauthorized: false // Only use this in development
+});
 
 const Chatroom = ({ user }) => {
   const [messages, setMessages] = useState([]);
@@ -19,10 +22,10 @@ const Chatroom = ({ user }) => {
   const chatContainerRef = useRef(null);
 
   useEffect(() => {
-    fetch('https://6711c250-f6ca-4f9f-a6e2-2b3df23ce26f-00-3paa249pb63vs.sisko.replit.dev:443/messages')
+    fetch('https://51.79.152.5:3001/messages')
       .then((response) => response.json())
       .then((data) => setMessages(data.messages));
-
+  
     setTimeout(() => {
       document.querySelector('.chatroom').classList.add('visible');
     }, 100);
@@ -124,7 +127,7 @@ const Chatroom = ({ user }) => {
         image,
       });
   
-      fetch('https://6711c250-f6ca-4f9f-a6e2-2b3df23ce26f-00-3paa249pb63vs.sisko.replit.dev:443/messages', {
+      fetch('https://51.79.152.5:3001/messages', {
         method: 'POST',
         body: formData,
       })
