@@ -1,0 +1,243 @@
+/* Chatroom.css */
+.chatroom {
+    background-color: #292a2d;
+    color: #e8eaed;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chatroom.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.chatroom h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8ab4f8;
+}
+
+.chatroom-messages {
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #5f6368;
+    border-radius: 8px;
+    position: relative;
+}
+
+.chatroom-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding: 5px 0;
+    position: relative;
+}
+
+.chatroom-message-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.chatroom-message-text {
+    flex-grow: 1;
+}
+
+.chatroom-username {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #8ab4f8;
+}
+
+.chatroom-image {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    align-items: left;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.chatroom-message-actions {
+    position: relative;
+    margin-left: 10px;
+}
+
+.chatroom-message-actions-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.chatroom-message-actions-button span {
+    width: 3px;
+    height: 3px;
+    background-color: #9aa0a6;
+    margin: 1px 0;
+}
+
+.chatroom-message-actions-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #3c4043;
+    border: 1px solid #5f6368;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.chatroom-message-actions-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e8eaed;
+    transition: background-color 0.3s;
+}
+
+.chatroom-message-actions-dropdown button:hover {
+    background-color: #4e5256;
+}
+
+.chatroom-input-container {
+    display: flex;
+    align-items: center;
+    background-color: #3c4043;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.chatroom-input {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    padding: 5px;
+    font-size: 16px;
+    color: #e8eaed;
+}
+
+.chatroom-input:focus {
+    outline: none;
+}
+
+.chatroom-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #9aa0a6;
+}
+
+.chatroom-send-button {
+    background-color: #8ab4f8;
+    color: #202124;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chatroom-send-button:hover {
+    background-color: #aecbfa;
+}
+
+.chatroom-welcome {
+    text-align: center;
+    color: #9aa0a6;
+    font-style: italic;
+}
+
+.chatroom-edit-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.chatroom-edit-input {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #5f6368;
+    border-radius: 4px;
+    background-color: #3c4043;
+    color: #e8eaed;
+}
+
+.chatroom-edit-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.chatroom-edit-container button:first-of-type {
+    background-color: #8ab4f8;
+    color: #202124;
+}
+
+.chatroom-edit-container button:last-of-type {
+    background-color: #3c4043;
+    color: #9aa0a6;
+}
+
+.chatroom-preview-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chatroom-preview-image img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.chatroom-preview-image button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #9aa0a6;
+}
+
+.chatroom-new-messages {
+    position: sticky;
+    top: 0;
+    background-color: #8ab4f8;
+    color: #202124;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
+.chatroom-new-messages.visible {
+    display: block;
+}

@@ -1,0 +1,60 @@
+{
+  "name": "class-website",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "@craftjs/core": "^0.2.10",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^10.14.0",
+    "framer-motion": "^11.9.0",
+    "grapesjs": "^0.21.13",
+    "here-js-api": "^2.0.0",
+    "http": "^0.0.1-security",
+    "http-proxy-middleware": "^3.0.3",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-block-editor": "^0.0.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "5.0.1",
+    "react-youtube": "^10.1.0",
+    "socket.io": "^4.8.0",
+    "socket.io-client": "^4.8.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start && node server.js",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run start\" \"npm run server\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.7"
+  }
+}

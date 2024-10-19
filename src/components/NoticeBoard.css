@@ -1,0 +1,216 @@
+.notice-board-container {
+    height: calc(100vh - 120px);
+    width: 100%;
+    background-color: #202124;
+    overflow: hidden;
+    position: relative;
+    padding-top: 80px;
+}
+
+#notice-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none;
+}
+
+.notice-container {
+    width: 40vmin;
+    height: 56vmin;
+    background-color: #2a2b2f;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.notice-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.notice-placeholder {
+    width: 100%;
+    height: 20%;
+    background-color: #3a3b3f;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.notice-content {
+    padding: 15px;
+    color: #ffffff;
+}
+
+.notice-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.notice-description {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.notice-date {
+    font-size: 0.8rem;
+    color: #8ab4f8;
+}
+
+.notice-board-header {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4285F4;
+    z-index: 10;
+    background-color: rgba(32, 33, 36, 0.8);
+    padding: 10px 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.notice-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(138, 180, 248, 0.4);
+}
+
+.notice-detail-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.notice-detail-content {
+    display: flex;
+    background-color: #2a2b2f;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.notice-detail-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.notice-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.notice-detail-info {
+    flex: 1;
+    padding: 20px;
+    color: #ffffff;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4285F4;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #notice-track {
+        /* flex-direction: column; */ /* Remove or comment out this line */
+        gap: 2vmin; /* Reduced gap */
+        left: 0;
+        transform: translate(0%, -50%);
+    }
+
+    .notice-container {
+        width: 60vmin; /* Reduced width */
+        height: 84vmin; /* Maintain aspect ratio */
+    }
+}
+
+/* Additional styles for better aesthetics */
+.notice-detail-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #4285F4;
+}
+
+.notice-detail-info p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.notice-detail-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Scrollbar styles for the detail view */
+.notice-detail-info::-webkit-scrollbar {
+    width: 8px;
+}
+
+.notice-detail-info::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 4px;
+}
+
+.notice-detail-info::-webkit-scrollbar-thumb {
+    background: #4285F4;
+    border-radius: 4px;
+}
+
+.notice-detail-info::-webkit-scrollbar-thumb:hover {
+    background: #5a9cf8;
+}

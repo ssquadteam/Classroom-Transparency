@@ -1,0 +1,123 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #202124;
+    color: #e8eaed;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #292a2d;
+    padding: 20px;
+    color: #e8eaed;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #292a2d;
+    padding: 20px;
+    color: #e8eaed;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    margin: 5px 10px;
+    color: #e8eaed;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Loading screen */
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #202124;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top: 5px solid #8ab4f8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* School Info */
+.school-info {
+    padding: 50px;
+    text-align: center;
+}
+
+.school-info h2 {
+    color: #8ab4f8;
+}
+
+.school-info p {
+    font-size: 18px;
+}
+
+/* Class Routine */
+.class-routine {
+    padding: 50px;
+    text-align: center;
+}
+
+.class-routine table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.class-routine th, .class-routine td {
+    padding: 15px;
+    border: 1px solid #5f6368;
+    text-align: center;
+}
+
+.class-routine th {
+    background-color: #292a2d;
+}
+
+/* Map */
+#mapContainer {
+    height: 400px;
+    width: 100%;
+    background-color: #292a2d;
+    border: 1px solid #5f6368;
+}

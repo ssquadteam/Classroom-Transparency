@@ -1,0 +1,162 @@
+:root {  
+    --purple: rgb(42, 42, 240);
+    --violet: rgb(70, 130, 180);
+    --pink: rgb(173, 216, 230);
+    --border: #5f6368;
+    --g1: #202124;
+    --g2: #3c4043;
+    --g3: #5f6368;
+  }
+  
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  @keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+  
+  .school-info {
+      background-color: #202124;
+      color: #e8eaed;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+      position: relative;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.5s ease;
+      overflow: hidden;
+  }
+  
+  .school-info.visible {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  
+  .school-info::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        130deg, 
+        transparent 0% 33%, 
+        var(--g1) 66%, 
+        var(--g2) 83.5%, 
+        var(--g3) 100%
+      );
+      background-position: 0% 0%;
+      background-size: 300% 300%;
+      transition: background-position 350ms ease, transform 350ms ease;
+      z-index: 1;
+  }
+  
+  .school-info:hover::before {
+      background-position: 100% 100%;
+      transform: scale(1.08, 1.03);
+  }
+  
+  .school-info-content {
+      position: relative;
+      z-index: 2;
+  }
+  
+  .school-info h2 {
+      color: #e8eaed;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+      display: inline-block;
+  }
+  
+  .school-info h2 > .magic {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .school-info h2 > .magic > .magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+  }
+  
+  .school-info h2 > .magic > .magic-star > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+  }
+  
+  .school-info h2 > .magic > .magic-star > svg > path {
+    fill: var(--violet);
+  }
+  
+  .school-info h2 > .magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+  
+  .school-info p {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+  }
+  
+  .school-info a {
+      color: #8ab4f8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  
+  .school-info a:hover {
+      color: #aecbfa;
+      text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+      .school-info {
+          max-width: 90%;
+      }
+  }

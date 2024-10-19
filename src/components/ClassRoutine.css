@@ -1,0 +1,157 @@
+.class-routine {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #292a2d;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateX(100%) scale(1);
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 10px 2px rgba(138, 180, 248, 0.5);
+}
+
+.class-routine.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.class-routine h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8ab4f8;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #e8eaed;
+}
+
+th, td {
+    border: 1px solid #5f6368;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #3c4043;
+    font-weight: bold;
+}
+
+/* New styles for teacher names */
+td span {
+    cursor: pointer;
+    color: #8ab4f8;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+td span:hover {
+    color: #aecbfa;
+}
+
+/* Styles for the teacher pop-up */
+.teacher-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.teacher-popup-content {
+    background-color: #292a2d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    width: 90%;
+    text-align: center;
+    color: #e8eaed;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 10px 2px rgba(138, 180, 248, 0.5);
+}
+
+.teacher-popup-content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.teacher-popup-content h3 {
+    margin-bottom: 10px;
+    color: #8ab4f8;
+}
+
+.teacher-popup-content p {
+    margin-bottom: 15px;
+}
+
+.teacher-popup-content button {
+    background-color: #8ab4f8;
+    color: #202124;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.teacher-popup-content button:hover {
+    background-color: #aecbfa;
+}
+
+@media screen and (max-width: 768px) {
+    .class-routine {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .teacher-popup-content {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    table {
+        font-size: 10px;
+    }
+
+    th, td {
+        padding: 4px;
+    }
+
+    .class-routine h2 {
+        font-size: 18px;
+    }
+
+    .teacher-popup-content {
+        padding: 10px;
+    }
+
+    .teacher-popup-content img {
+        width: 80px;
+        height: 80px;
+    }
+}
