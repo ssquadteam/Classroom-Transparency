@@ -6,28 +6,31 @@ const Login = ({ onLogin }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [usersData, setUsersData] = useState([]);
+  const [debugInfo, setDebugInfo] = useState('');
 
   useEffect(() => {
     try {
-      const data = JSON.parse(process.env.REACT_APP_USERS_JSON || '[]');
+      const rawData = process.env.REACT_APP_USERS_JSON || '[]';
+      const data = JSON.parse(rawData);
       setUsersData(data);
+      setDebugInfo(`Loaded ${data.length} user(s)`);
     } catch (err) {
-      console.error('Error parsing user data:', err);
-      setError('Error loading user data. Please try again later.');
+      setDebugInfo(`Error parsing user data: ${err.message}`);
+      setError('Error loading user data. Please check with the administrator.');
     }
   }, []);
 
-  const handleLogin = async () => {
+  const handleLogin = () => {
     setIsLoading(true);
     setError('');
-
-    // Simulating an API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    setDebugInfo(`Attempting login with ID: ${userId}`);
 
     const user = usersData.find((user) => user.id === userId);
     if (user) {
+      setDebugInfo(`Login successful for user: ${user.name}`);
       onLogin(user);
     } else {
+      setDebugInfo(`User not found for ID: ${userId}`);
       setError('Invalid User ID. Please try again.');
     }
 
@@ -47,6 +50,7 @@ const Login = ({ onLogin }) => {
         {isLoading ? 'Logging in...' : 'Login'}
       </button>
       {error && <p className="error">{error}</p>}
+      <p className="debug-info">{debugInfo}</p>
     </div>
   );
 };
