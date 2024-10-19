@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Classroom-Transparency/static/css/main.9962ea0e.css",
+    "main.js": "/Classroom-Transparency/static/js/main.300c91d5.js",
+    "static/media/image8.jpg": "/Classroom-Transparency/static/media/image8.794c9346be5e1f4f4b5a.jpg",
+    "static/media/image6.jpg": "/Classroom-Transparency/static/media/image6.6320dd6e192b28ee121b.jpg",
+    "static/media/image3.jpg": "/Classroom-Transparency/static/media/image3.37bade97eb8671dcf653.jpg",
+    "static/media/revisedschedule.jpg": "/Classroom-Transparency/static/media/revisedschedule.25ce2e5f47c042685628.jpg",
+    "static/media/image4.jpg": "/Classroom-Transparency/static/media/image4.ba73ad24e4031322a46a.jpg",
+    "static/media/image1.jpg": "/Classroom-Transparency/static/media/image1.7cdd34e3c5cfdccb306f.jpg",
+    "static/media/puja.jpg": "/Classroom-Transparency/static/media/puja.dcca39df138b3cc2ab77.jpg",
+    "static/media/group.jpg": "/Classroom-Transparency/static/media/group.6c38f4ce801c4751062c.jpg",
+    "static/media/mrhasan.jpg": "/Classroom-Transparency/static/media/mrhasan.5f52e06d740eae798837.jpg",
+    "static/media/mssania.jpg": "/Classroom-Transparency/static/media/mssania.3d1aad06201fa49fddb5.jpg",
+    "static/media/image5.jpg": "/Classroom-Transparency/static/media/image5.dbb427a8814f47d22507.jpg",
+    "static/media/misssuraiya.jpg": "/Classroom-Transparency/static/media/misssuraiya.250c35878dbe982c1a12.jpg",
+    "static/media/msbarna.jpg": "/Classroom-Transparency/static/media/msbarna.6531275cd141aa73f184.jpg",
+    "static/media/image2.jpg": "/Classroom-Transparency/static/media/image2.3e0118bb8b7000985a3f.jpg",
+    "static/media/mssajia.jpg": "/Classroom-Transparency/static/media/mssajia.f4ac6a31260ce34dfb1a.jpg",
+    "static/media/msfalguni.jpg": "/Classroom-Transparency/static/media/msfalguni.d733852d2e3dbd65ef15.jpg",
+    "static/media/mshena.jpg": "/Classroom-Transparency/static/media/mshena.4941005cf4160b652e7b.jpg",
+    "static/media/logo.png": "/Classroom-Transparency/static/media/logo.7a99cc4eaf3b4c3c422f.png",
+    "static/media/mrsalam.jpg": "/Classroom-Transparency/static/media/mrsalam.cf5400da48aa5be899cb.jpg",
+    "static/media/mrratul.jpg": "/Classroom-Transparency/static/media/mrratul.1402fd9cd7b5f69ed2c1.jpg",
+    "static/media/mremamul.jpg": "/Classroom-Transparency/static/media/mremamul.dd90586d1916b3c6c82e.jpg",
+    "static/media/mrfarid.jpg": "/Classroom-Transparency/static/media/mrfarid.113969735489cc4d2af4.jpg",
+    "index.html": "/Classroom-Transparency/index.html",
+    "main.9962ea0e.css.map": "/Classroom-Transparency/static/css/main.9962ea0e.css.map",
+    "main.300c91d5.js.map": "/Classroom-Transparency/static/js/main.300c91d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9962ea0e.css",
+    "static/js/main.300c91d5.js"
+  ]
+}
