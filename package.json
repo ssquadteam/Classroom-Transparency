@@ -2,6 +2,7 @@
   "name": "class-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ssquadteam.github.io/Classroom-Transparency",
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@craftjs/core": "^0.2.10",
@@ -28,6 +29,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start && node server.js",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run start\" \"npm run server\"",
@@ -55,6 +58,7 @@
   },
   "devDependencies": {
     "concurrently": "^9.0.1",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "tailwindcss": "^3.4.14"
   }
 }

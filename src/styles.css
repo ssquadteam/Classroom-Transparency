@@ -1,4 +1,7 @@
 /* Smooth scrolling */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html {
     scroll-behavior: smooth;
 }
@@ -15,6 +18,7 @@ html, body {
     background-color: #202124;
     color: #e8eaed;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 /* Navbar */
@@ -80,32 +84,36 @@ html, body {
 
 /* School Info */
 .school-info {
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .school-info h2 {
     color: #8ab4f8;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 .school-info p {
-    font-size: 18px;
+    font-size: clamp(1rem, 3vw, 1.125rem);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Class Routine */
 .class-routine {
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .class-routine table {
-    width: 80%;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     border-collapse: collapse;
 }
 
 .class-routine th, .class-routine td {
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #5f6368;
     text-align: center;
 }
@@ -121,3 +129,37 @@ html, body {
     background-color: #292a2d;
     border: 1px solid #5f6368;
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .school-info, .class-routine {
+        padding: 30px 15px;
+    }
+
+    .class-routine table {
+        font-size: 14px;
+    }
+
+    .class-routine th, .class-routine td {
+        padding: 8px;
+    }
+
+    #mapContainer {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .class-routine table {
+        font-size: 12px;
+    }
+
+    .class-routine th, .class-routine td {
+        padding: 5px;
+    }
+
+    #mapContainer {
+        height: 250px;
+    }
+}
+

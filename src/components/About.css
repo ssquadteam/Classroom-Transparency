@@ -101,13 +101,13 @@
 }
 
 .card-title {
-  font-size: 6vmin;
+  font-size: 4vmin;
   margin-bottom: 8px;
   font-weight: 500; /* This makes the title bold */
 }
 
 .card-subtitle {
-  font-size: 3vmin;
+  font-size: 2vmin;
   font-weight: 400; /* Keep subtitle normal weight */
 }
 
